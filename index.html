@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- No loading screen element here - it will be generated dynamically -->
+    
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <div class="image-container">
+            <img class="image" src="images/brainmap.png" draggable="false" />
+            <a href="src/brain/brain.html" class="view-button">View</a>
+        </div>
+        <div class="image-container">
+            <img class="image" src="images/heart2.png" draggable="false" />
+            <a href="src/heart/heart.html" class="view-button">View</a>
+        </div>
+        <div class="image-container">
+            <img class="image" src="images/mountain (1).png" draggable="false" />
+            <a href="src/mountain/mountain.html" class="view-button">View</a>
+        </div>
+        <div class="image-container">
+            <img class="image" src="images/pinetreebasic.jpg" draggable="false" />
+            <a href="src/tree/index.html" class="view-button">View</a>
+        </div>
+        
+        <!-- Voting container -->
+        <div class="form-container">
+            <h2>Vote For Your Favorite!</h2>
+            <form id="email-vote-form" action="https://formspree.io/f/mgvojqlw" method="POST">
+                <input type="email" id="email-input" name="email" placeholder="Enter your email" required>
+                <div class="voting-options" id="voting-options">
+                    <button type="button" class="vote-button" data-option="brain">Brain</button>
+                    <button type="button" class="vote-button" data-option="heart">Heart</button>
+                    <button type="button" class="vote-button" data-option="mountain">Mountain</button>
+                    <button type="button" class="vote-button" data-option="tree">Tree</button>
+                </div>
+                <input type="hidden" name="vote" id="vote-input">
+                <button type="submit" id="submit-button" class="submit-button">Submit</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+    
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

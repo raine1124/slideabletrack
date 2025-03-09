@@ -38,12 +38,6 @@ function initializeImages() {
     const images = document.querySelectorAll('.image');
     images.forEach(img => {
         // Force a reload of the image
-        const src = img.src;
-        img.src = '';
-        setTimeout(() => {
-            img.src = src;
-        }, 10);
-        
         // Reset any transforms
         img.style.transform = '';
     });

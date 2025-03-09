@@ -286,6 +286,9 @@ export class TreePointCloud {
         const colors = [];
         const baseColor = new THREE.Color(color);
         
+        // Use this.params.colorVariation instead of colorVariation directly
+        const colorVariation = this.params.colorVariation;
+        
         for (let i = 0; i < positions.count; i++) {
             vertices.push(
                 positions.getX(i) + mesh.position.x,
@@ -293,7 +296,6 @@ export class TreePointCloud {
                 positions.getZ(i) + mesh.position.z
             );
             
-            const colorVariation = this.params.colorVariation;
             colors.push(
                 baseColor.r * (1 - colorVariation/2 + Math.random() * colorVariation),
                 baseColor.g * (1 - colorVariation/2 + Math.random() * colorVariation),
